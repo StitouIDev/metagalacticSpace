@@ -1,23 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q7v-Io-bgi">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--PlanetsVC-->
+        <scene sceneID="zzG-aD-y9q">
+            <objects>
+                <viewController id="q7v-Io-bgi" customClass="PlanetsVC" customModule="metagalcticSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ri7-Ve-ike">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gjk-H1-1Lg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="planetsCell" rowHeight="200" id="mEh-Au-Awc" customClass="PlanetsCell" customModule="metagalcticSpace" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEh-Au-Awc" id="Bfo-Bt-sks">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars" translatesAutoresizingMaskIntoConstraints="NO" id="4uP-MM-0bv">
+                                                    <rect key="frame" x="8" y="0.0" width="398" height="191.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpO-HL-PLn">
+                                                    <rect key="frame" x="40" y="67.5" width="334" height="65"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="4uP-MM-0bv" secondAttribute="trailing" constant="8" id="0a1-Uj-RhI"/>
+                                                <constraint firstItem="BpO-HL-PLn" firstAttribute="leading" secondItem="Bfo-Bt-sks" secondAttribute="leadingMargin" constant="20" id="396-3C-ZvF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BpO-HL-PLn" secondAttribute="trailing" constant="20" id="CfN-7T-pDp"/>
+                                                <constraint firstItem="4uP-MM-0bv" firstAttribute="top" secondItem="Bfo-Bt-sks" secondAttribute="top" id="F9B-xw-zas"/>
+                                                <constraint firstItem="BpO-HL-PLn" firstAttribute="centerY" secondItem="Bfo-Bt-sks" secondAttribute="centerY" id="OYO-bI-TgE"/>
+                                                <constraint firstAttribute="bottom" secondItem="4uP-MM-0bv" secondAttribute="bottom" constant="8" id="RZg-GN-2tw"/>
+                                                <constraint firstItem="4uP-MM-0bv" firstAttribute="leading" secondItem="Bfo-Bt-sks" secondAttribute="leading" constant="8" id="k4T-jq-31N"/>
+                                                <constraint firstItem="BpO-HL-PLn" firstAttribute="centerX" secondItem="Bfo-Bt-sks" secondAttribute="centerX" id="yzU-mD-YHA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="4uP-MM-0bv" id="EOc-mj-U1t"/>
+                                            <outlet property="name" destination="BpO-HL-PLn" id="2VQ-y5-zjl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gjk-H1-1Lg" firstAttribute="top" secondItem="d5S-PM-EfY" secondAttribute="top" id="4IO-3y-F8I"/>
+                            <constraint firstAttribute="bottom" secondItem="gjk-H1-1Lg" secondAttribute="bottom" id="XYn-7J-4Ob"/>
+                            <constraint firstItem="gjk-H1-1Lg" firstAttribute="leading" secondItem="d5S-PM-EfY" secondAttribute="leading" id="dT5-1y-qbD"/>
+                            <constraint firstItem="d5S-PM-EfY" firstAttribute="trailing" secondItem="gjk-H1-1Lg" secondAttribute="trailing" id="kM6-c6-UgF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d5S-PM-EfY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="gjk-H1-1Lg" id="3mD-hj-e5C"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="toPlanet" id="3Wv-eX-NsL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xt2-t6-akR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-790" y="19"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="metagalcticSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                             </arscnView>
                         </subviews>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
@@ -34,4 +105,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="mars" width="2048" height="1024"/>
+    </resources>
 </document>

@@ -13,6 +13,8 @@
 		BB8691EE27B992F800BA35EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8691EC27B992F800BA35EF /* Main.storyboard */; };
 		BB8691F027B992FA00BA35EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB8691EF27B992FA00BA35EF /* Assets.xcassets */; };
 		BB8691F327B992FA00BA35EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB8691F127B992FA00BA35EF /* LaunchScreen.storyboard */; };
+		BB8691FB27B9935F00BA35EF /* PlanetsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8691FA27B9935F00BA35EF /* PlanetsVC.swift */; };
+		BB8691FD27B9942E00BA35EF /* PlanetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8691FC27B9942E00BA35EF /* PlanetsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		BB8691EF27B992FA00BA35EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB8691F227B992FA00BA35EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB8691F427B992FA00BA35EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8691FA27B9935F00BA35EF /* PlanetsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsVC.swift; sourceTree = "<group>"; };
+		BB8691FC27B9942E00BA35EF /* PlanetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				BB8691E627B992F800BA35EF /* AppDelegate.swift */,
-				BB8691E827B992F800BA35EF /* art.scnassets */,
 				BB8691EA27B992F800BA35EF /* ViewController.swift */,
 				BB8691EC27B992F800BA35EF /* Main.storyboard */,
+				BB8691E827B992F800BA35EF /* art.scnassets */,
 				BB8691EF27B992FA00BA35EF /* Assets.xcassets */,
 				BB8691F127B992FA00BA35EF /* LaunchScreen.storyboard */,
 				BB8691F427B992FA00BA35EF /* Info.plist */,
+				BB8691FA27B9935F00BA35EF /* PlanetsVC.swift */,
+				BB8691FC27B9942E00BA35EF /* PlanetsCell.swift */,
 			);
 			path = metagalcticSpace;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB8691EB27B992F800BA35EF /* ViewController.swift in Sources */,
+				BB8691FB27B9935F00BA35EF /* PlanetsVC.swift in Sources */,
 				BB8691E727B992F800BA35EF /* AppDelegate.swift in Sources */,
+				BB8691FD27B9942E00BA35EF /* PlanetsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
